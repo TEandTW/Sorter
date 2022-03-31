@@ -8,4 +8,7 @@ public class Main {
 	// write your code here
         new GUI();
     }
+    public static void no() {
+
+    }
 }
