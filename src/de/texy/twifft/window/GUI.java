@@ -14,6 +14,7 @@ public class GUI{
     ImageIcon iconImg;
 
     JMenuItem closeItem = clickFunctions.closeItem;
+    JMenuItem optionsItem = clickFunctions.optionsItem;
 
     public GUI() {
         loadImg();
@@ -45,8 +46,9 @@ public class GUI{
 
 
 
-        menuBar.add(optionsMenu);
+        menuBar.add(optionsMenu.add(optionsItem));
         menuBar.add(closeMenu.add(closeItem));
+
 
         frame.setJMenuBar(menuBar);
         frame.setVisible(true); //Visibility
