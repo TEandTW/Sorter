@@ -46,6 +46,7 @@ public class GUI{
 
 
 
+
         frame.setVisible(true); //Visibility
     }
 
