@@ -3,7 +3,7 @@ package de.texy.twifft.window;
 import javax.swing.*;
 import java.awt.*;
 
-public class GUI {
+public class GUI{
     JFrame frame = new JFrame();
 
     Container c = frame.getContentPane();
@@ -13,6 +13,7 @@ public class GUI {
     ImageIcon iconImg;
 
 
+
     public GUI() {
         loadImg();
         Cursor cursor = new Cursor(Cursor.CROSSHAIR_CURSOR);
@@ -20,7 +21,7 @@ public class GUI {
 
         frame.setSize(450, 800); //Size of da Window
 
-        frame.setVisible(true); //Visibility
+
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // What is happening when pressed on "X"
 
@@ -34,14 +35,18 @@ public class GUI {
 
         frame.setIconImage(iconImg.getImage());
 
-        MenuBar mb = new MenuBar();
-
-        Menu menu = new Menu();
-
-      //  frame.setMenuBar(mb.add(new Menu()));
-
+        JMenuBar menuBar = new JMenuBar();
+        JMenu optionsMenu = new JMenu("Options");
+        menuBar.add(optionsMenu);
+        frame.setJMenuBar(menuBar);
 
 
+
+
+
+
+
+        frame.setVisible(true); //Visibility
     }
 
     public void loadImg() {
