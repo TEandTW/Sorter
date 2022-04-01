@@ -9,8 +9,6 @@ public class Main {
         new GUI();
     }
 
-    public static void Abi() {
-        String str;
-    }
+
 
 }

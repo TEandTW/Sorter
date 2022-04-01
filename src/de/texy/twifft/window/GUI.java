@@ -10,8 +10,13 @@ public class GUI {
 
     JPanel panel = new JPanel();
 
+    ImageIcon iconImg;
+
 
     public GUI() {
+        loadImg();
+        Cursor cursor = new Cursor(Cursor.CROSSHAIR_CURSOR);
+
 
         frame.setSize(450, 800); //Size of da Window
 
@@ -25,8 +30,27 @@ public class GUI {
 
         frame.setTitle("Sorter"); //Title of the Window
 
+        frame.setCursor(cursor);
+
+        frame.setIconImage(iconImg.getImage());
+
+        MenuBar mb = new MenuBar();
+
+        Menu menu = new Menu();
+
+      //  frame.setMenuBar(mb.add(new Menu()));
+
+
 
     }
+
+    public void loadImg() {
+        iconImg = new ImageIcon("ressources/icon.png");
+
+    }
+
+
+
 
 
 
