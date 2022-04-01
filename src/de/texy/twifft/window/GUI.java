@@ -2,6 +2,7 @@ package de.texy.twifft.window;
 
 import javax.swing.*;
 import java.awt.*;
+import de.texy.twifft.functions.clickFunctions;
 
 public class GUI{
     JFrame frame = new JFrame();
@@ -12,7 +13,7 @@ public class GUI{
 
     ImageIcon iconImg;
 
-
+    JMenuItem closeItem = clickFunctions.closeItem;
 
     public GUI() {
         loadImg();
@@ -23,7 +24,7 @@ public class GUI{
 
 
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // What is happening when pressed on "X"
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // What is happening when pressed on "X"
 
         frame.getContentPane().setBackground(new Color(39, 43, 46)); //Background Color "Find die angenehm xD"
 
@@ -36,17 +37,18 @@ public class GUI{
         frame.setIconImage(iconImg.getImage());
 
         JMenuBar menuBar = new JMenuBar();
+
         JMenu optionsMenu = new JMenu("Options");
+
+        JMenu closeMenu = new JMenu("Close");
+
+
+
+
         menuBar.add(optionsMenu);
+        menuBar.add(closeMenu.add(closeItem));
+
         frame.setJMenuBar(menuBar);
-
-
-
-
-
-
-
-
         frame.setVisible(true); //Visibility
     }
 
@@ -54,6 +56,7 @@ public class GUI{
         iconImg = new ImageIcon("ressources/icon.png");
 
     }
+
 
 
 
