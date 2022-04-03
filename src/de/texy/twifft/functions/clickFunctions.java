@@ -1,7 +1,12 @@
 package de.texy.twifft.functions;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class clickFunctions {
     public static Boolean aboutToExit = false;
