@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class clickFunctions {
+    public static Boolean aboutToExit = false;
+
 
     public clickFunctions() {
     }
@@ -11,6 +13,7 @@ public class clickFunctions {
     public static JMenuItem closeItem = new JMenuItem(new AbstractAction("Close") {
             @Override
             public void actionPerformed(ActionEvent e) {
+                aboutToExit = true;
                 System.exit(1);
             }
     });
