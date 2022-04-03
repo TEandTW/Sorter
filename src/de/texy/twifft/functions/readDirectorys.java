@@ -17,8 +17,8 @@ public class readDirectorys{
     }
     public static Path path;
     public static void listFile() {
-
-        path = Paths.get("C:\\Users\\schin\\Downloads\\ganache");
+        String home = System.getProperty("user.home");
+        path = Paths.get(home + "\\Downloads");
 
 
 
